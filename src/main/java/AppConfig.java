@@ -18,10 +18,11 @@ public class AppConfig {
         return new Cat();
     }
 
-    @Bean(name="hellocat")
-    //TODO: Почему не работает, если поменять Scope на "prototype"?
-    @Scope("singleton")
-    public Cat getHelloCat() {
-        return new Cat(getHelloWorld());
-    }
+    //Для проверки лучше использовать предыдущий коммит
+//    @Bean(name="hellocat")
+//    //TODO: Почему не работает, если поменять Scope на "prototype"?
+//    @Scope("singleton")
+//    public Cat getHelloCat() {
+//        return new Cat(getHelloWorld());
+//    }
 }
