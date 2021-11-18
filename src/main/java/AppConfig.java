@@ -11,4 +11,17 @@ public class AppConfig {
         helloWorld.setMessage("Hello World!");
         return helloWorld;
     }
+
+//    @Bean(name="cat")
+//    @Scope(scopeName = "prototype")
+//    public Cat getCat() {
+//        return new Cat();
+//    }
+
+    @Bean(name="hellocat")
+    //TODO: Почему не работает, если поменять Scope на "prototype"?
+    @Scope("singleton")
+    public Cat getHelloCat() {
+        return new Cat(getHelloWorld());
+    }
 }
